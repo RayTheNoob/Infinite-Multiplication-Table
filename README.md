@@ -6,6 +6,8 @@ An "infinite" multiplication table made with [Love 2d](love2d.org) that I made b
 
  - Fix color glitch with cursor square
  - Let mouse scroll
+ - Highlight all squares with the same number/click to bookmark
+ - Zoom
  - Add scroll-wheel to change speed
  - ⭐ Optimize tile drawing to only draw new tiles and fix the thing where the graphics completely die when you get to far ⭐
 
