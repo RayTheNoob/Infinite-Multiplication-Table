@@ -4,7 +4,7 @@ function love.load()
 		[WARNING! THIS CODE IS TERRIBLE!]
 
 	--]]
-	---max 524288, 16400000, 1000000000
+	--hope it works this time
 	c = 0
 	size = 64
 	uisize = 64
@@ -371,8 +371,8 @@ love.graphics.print(settings.nav.loc[2],font,love.graphics.getWidth()/2,love.gra
 				if ty == 5 and oktoclick then
 					settings.nav.place = 1
 					settings.nav.loc = {}
-					settings.nav.loc[1] = 0
-					settings.nav.loc[2] = 0
+					settings.nav.loc[1] = "0"
+					settings.nav.loc[2] = "0"
 					settings.screen = "nav"
 				end
 				if ty == 6 and oktoclick then
@@ -475,7 +475,7 @@ function love.keypressed(key,scan)
 				message = "Speed set to "..i
 			end
 		end
-		if (tostring(i)) == key and settings.screen == "nav" then
+		if (tostring(i)) == key and settings.screen == "nav" and settings.window.open and settings.nav.place < 3 then
 			settings.nav.loc[settings.nav.place] = settings.nav.loc[settings.nav.place] .. key
 		end
 	end
