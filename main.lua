@@ -475,7 +475,7 @@ function love.keypressed(key,scan)
 				message = "Speed set to "..i
 			end
 		end
-		if (tostring(i)) == key then
+		if (tostring(i)) == key and settings.screen == "nav" then
 			settings.nav.loc[settings.nav.place] = settings.nav.loc[settings.nav.place] .. key
 		end
 	end
